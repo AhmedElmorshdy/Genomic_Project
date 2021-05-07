@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Genomics Landing Page</title>
+  <!-- Load Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+      <h1>Genomics Project</h1>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    The first section is set to active class by default -->
+    <section id="section1" data-nav="Description" class="your-active-class">
+      <div class="landing__container">
+        <h2>Description</h2>
+        <p>Recent advancements in sequencing machines have rapidly improved our ability to study genomic material at an unprecedented scale.
+
+Despite substantial improvements in sequencing technologies, errors present in the data still risk confounding downstream analysis and limiting the applicability of sequencing technologies. Computational error correction promises to eliminate sequencing errors, but the relative accuracy of error correction algorithms remains unknown.
+
+So, This website is dealing with different biological data using artificial intelligence technology to detect a specific error resulting from machine sequence and try to correct it to get best accuracy.
+          </p>
+
+      <div class="but"><button class="rbutton" onclick="window.location.href='result.html';">Try It</button></div>
+      </div>
+    </section>
+    <section id="section2" data-nav="Test" >
+      <div class="landing__container">
+        <h2>Test</h2>
+        
+         <input type="file" class="infile" >
+       </br>
+      </br>
+        <div>
+        <input type="radio" id="DNA" name="testType" value="DNA">
+        <label for="DNA">DNA</label><br>
+        <input type="radio" id="RNA" name="testType" value="RNA">
+        <label for="RNA">RNA</label><br>
+        <input type="radio" id="Protein" name="testType" value="Protein">
+        <label for="Protein">Protein</label>
+        </div>
+      </br>
+      </br>
+        <div class="but"><button class="rbutton" onclick="window.location.href='result.html';">Submit</button></div>
+      </div>
+    </section>
+    <section id="section3" data-nav="DNA" >
+      <div class="landing__container">
+        <h2>DNA</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <input type="file" class="infile" >
+      </br>
+     </br>
+        <div class="but"><button class="rbutton" onclick="window.location.href='result.html';">Submit</button></div>
+      </div>
+    </section>
+    <section id="section4" data-nav="RNA">
+      <div class="landing__container">
+        <h2>RNA</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+      <input type="file" class="infile" >
+      </br>
+      </br>
+      <div class="but"><button class="rbutton" onclick="window.location.href='result.html';">Submit</button></div>
+      </div>
+    </section>
+    <section id="section5" data-nav="Protein">
+      <div class="landing__container">
+        <h2>Protein</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+       <input type="file" class="infile" >
+       </br>
+       </br>
+     <div class="but"><button class="rbutton" onclick="window.location.href='result.html';">Submit</button></div>
+      </div>
+    </section>
+     
+    
+  </main>
+
+  <footer class="page__footer">
+    <p>&copy Fcis Team</p>
+    <div class="icons">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </footer>
+<button onclick="goToTop()" id="mybutton">Top</button>
+<script src="js\app.js"></script>
+</body>
+</html>

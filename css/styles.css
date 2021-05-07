@@ -1,0 +1,346 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+
+/* ---- Base Rules ---- */
+body {
+    background: #dad9d9;
+   /* background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);*/
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #b41212;
+}
+html{
+     scroll-behavior: smooth;
+}
+
+/* Typeography General*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+        margin: 2em 4rem 1em;
+    }
+}
+
+h2 {
+    border-bottom: 1px solid #fbfb07;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+}
+
+p {
+    line-height: 1.6em;
+    color: #000;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:visited {
+  color: #000;
+}
+/* ---- Layout Rules ---- */
+main {
+    margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+
+}
+#but{
+   
+    text-align: left;
+    overflow: hidden;
+}
+
+.rbutton{
+     position: relative;
+    display: block;
+    text-align: center;
+    margin: auto; 
+    width: 10em;  
+    color: #b41212;
+    float: left;
+}
+.infile{
+    float: left;
+    display: block;
+}
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu ul {
+    padding-left: 0;
+    margin: auto;
+ 
+    float: left;
+   
+}
+
+.navbar__menu li {
+    display: inline-block;
+    margin: 2px 15px 5px 5px;
+    color: #000;
+
+}
+
+.navbar__menu li:hover{
+    cursor: pointer;
+    opacity: 60%;
+}
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    
+
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: #dad9d9;
+}
+
+/* Footer Styles */
+.page__footer {
+    position: relative;
+    bottom: 0px;
+    background: #000;
+    padding-top: .25em;
+    padding-bottom: .5em;
+    color: #fff;
+}
+
+.page__footer p{
+    color: #fff;
+    display:inline-block;
+}
+.page__footer .icons{
+    float :right;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: left; 
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.your-active-class {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.your-active-class .landing__container::before {
+    background-image: url('../22.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.your-active-class .landing__container::after {
+       background-image: url('../22.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+/* active link*/
+.activeLink{
+    background-color: #c76464;
+}
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
+/*button style*/
+#mybutton {
+  display: none;
+  position: fixed;
+ bottom: 70px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #0046ff;
+  color: #731313;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+
+}
+#mybutton:hover{
+    opacity: 80%;
+}
+.icons{
+    margin-right:10px; 
+}
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 3px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-linkedin:before {
+    content: "\f0e1";
+color: #eee;
+}
+.fa-google:before {
+   content: "\f1a0";
+color: #eee;
+}
+.fa-twitter:before {
+    content: "\f099";
+color: #eee;
+}
+.fa-facebook:before {
+    content: "\f09a";
+color: #eee;
+}
