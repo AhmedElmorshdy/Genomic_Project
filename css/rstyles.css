@@ -16,13 +16,15 @@ html{
     float: left;
 }
 .fcon{
-	width: 80%;
-	margin: auto;
-	text-align: center;
+	float: left;
 }
 .container{
 	width: 80%;
-	margin: auto;
+	margin: auto;}
+
+#img{
+margin-bottom: 150px;
+
 }
 h2 {
     border-bottom: 1px solid #fbfb07;
@@ -101,6 +103,7 @@ float: left;
     z-index: 5;
     background-color: #dad9d9;
     text-align: center;
+border-bottom: 1px solid #fbfb07;
 }
 
 /* Footer Styles */
@@ -128,18 +131,6 @@ padding-left: 50px;
 overflow: hidden;
 }
 
-@media only screen and (min-width: 35em){
-    .landing__container {
-        max-width: 50em;
-        padding: 4em;
-    }
-}
-
-section:nth-of-type(even) .landing__container {
-    margin-right: 0;
-    margin-left: auto;
-    text-align: left; 
-}
 .activeLink{
     background-color: #c76464;
 }
