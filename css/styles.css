@@ -22,25 +22,19 @@ html{
 }
 
 /* Typeography General*/
-h1 {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 3em;
-    margin: 2em 1rem;
-}
 
-@media only screen and (min-width: 35em){
-    h1 {
-        font-size: 7em;
-        margin: 2em 4rem 1em;
-    }
+#logo{
+    padding:0em 1em;
+    float: left;
 }
-
 h2 {
     border-bottom: 1px solid #fbfb07;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
 }
-
+h3{
+    margin: 0;
+}
 p {
     line-height: 1.6em;
     color: #000;
@@ -57,10 +51,7 @@ main {
     margin: 10vh 1em 10vh;
 }
 
-.main-hero {
-    min-height: 40vh;
-    padding-top: 3em;
-}
+
 
 section {
     position: relative;
@@ -89,19 +80,22 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-.navbar__menu ul {
-    padding-left: 0;
-    margin: auto;
- 
+nav{
+    margin-left: 1em;
     float: left;
+    display: inline-block;
+}
+.navbar__menu ul {
+   padding: 0;
+    margin: auto;
    
 }
 
 .navbar__menu li {
     display: inline-block;
-    margin: 2px 15px 5px 5px;
+    margin: 2px 15px 0px 5px;
     color: #000;
-
+float: left;
 }
 
 .navbar__menu li:hover{
@@ -131,6 +125,7 @@ section {
     width: 100%;
     z-index: 5;
     background-color: #dad9d9;
+    text-align: center;
 }
 
 /* Footer Styles */
@@ -272,26 +267,7 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
-/*button style*/
-#mybutton {
-  display: none;
-  position: fixed;
- bottom: 70px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #0046ff;
-  color: #731313;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
 
-}
-#mybutton:hover{
-    opacity: 80%;
-}
 .icons{
     margin-right:10px; 
 }

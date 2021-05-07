@@ -1,42 +1,111 @@
-body{
-	background: #dad9d9;
-  
-   /* background: linear-gradient(0deg, rgb(149 128 128) 0%, rgb(148 147 147) 100%);*/
+body {
+    background: #dad9d9;
+   /* background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);*/
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #b41212;
 }
-header{
-	text-align: center; 
-	margin: 0px 0px 10px 0px ;
-	display:block;
-	background-color: #b3b2b2;
-	padding: 10px 0px;
-	border-bottom: 1.5px solid #fbfb13;
+html{
+     scroll-behavior: smooth;
 }
-h2{
-	
-    font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
-    color: #b41212;
-	margin: 0;
+
+/* Typeography General*/
+
+#logo{
+    padding:0em 1em;
+    float: left;
+}
+.fcon{
+	width: 80%;
+	margin: auto;
+	text-align: center;
 }
 .container{
 	width: 80%;
-	text-align: center;
 	margin: auto;
 }
+h2 {
+    border-bottom: 1px solid #fbfb07;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+}
 h3{
-	font-size: 2em;
+    margin: 0;
 }
-table, th, td {
-  border: 1px solid black;
+p {
+    line-height: 1.6em;
+    color: #000;
 }
-td,th{
-	height: 40px;
+a{
+    text-decoration: none;
+    color: #000;
 }
+a:visited {
+  color: #000;
+}
+/* ---- Layout Rules ---- */
+main {
+    margin: 10vh 1em 10vh;
+    text-align: center;
+}
+
+
+
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+nav{
+    margin-left: 1em;
+    float: left;
+    display: inline-block;
+}
+.navbar__menu ul {
+   padding: 0;
+    margin: auto;
+   
+}
+
+.navbar__menu li {
+    display: inline-block;
+    margin: 2px 15px 0px 5px;
+    color: #000;
+float: left;
+}
+
+.navbar__menu li:hover{
+    cursor: pointer;
+    opacity: 60%;
+}
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    
+
+}
+
+.navbar__menu .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+/* Header Styles */
+.page__header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: #dad9d9;
+    text-align: center;
+}
+
+/* Footer Styles */
 .page__footer {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     background: #000;
     padding-top: .25em;
@@ -51,9 +120,31 @@ td,th{
 .page__footer .icons{
     float :right;
 }
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+#img{
+padding-left: 50px;
+overflow: hidden;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: left; 
+}
+.activeLink{
+    background-color: #c76464;
+}
 .icons{
-    margin-right:10px;
-    margin-left: 10px; 
+    margin-right:10px; 
 }
 .fa {
   padding: 10px;

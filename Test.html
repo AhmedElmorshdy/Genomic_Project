@@ -1,14 +1,25 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Genomics Landing Page</title>
+  <!-- Load Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
   <link href="css/tstyle.css" rel="stylesheet">
 </head>
 <body>
-	<header></header>
+	<header class="page__header"> 
+		<div id="logo"> <h3>Genomics Project</h3></div>
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list">
+        <li ><a href="index.html">Home</a></li>
+       <li class="activeLink"><a href="test.html">Test</a></li>
+      </ul>
+    </nav></header>
 <main>
 	 <section id="section1" data-nav="Test" >
       <div class="landing__container">
@@ -39,5 +50,14 @@
     </section>
 
 </main>
+ <footer class="page__footer">
+    <p>&copy Fcis Team</p>
+    <div class="icons">
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    </div>
+  </footer>
 </body>
 </html>

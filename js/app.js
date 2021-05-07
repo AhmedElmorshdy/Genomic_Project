@@ -54,11 +54,7 @@ let links=document.querySelectorAll('a');
 // Add class 'active' to section when near top of viewport
 window.onscroll = function(){	
 	//make button to go to top
-	if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ){
-		mybutton.style.display = "block";
-		} else {
-		mybutton.style.display = "none";
-		};
+	
 	//loop on sections
 	sections.forEach(section=>{
 	//use getBoundingClientRect to define sction location

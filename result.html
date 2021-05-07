@@ -3,49 +3,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Genomics Landing Page</title>
+  <!-- Load Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="css/rstyles.css" rel="stylesheet">
-  <title>Test result </title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/tstyle.css" rel="stylesheet">
 </head>
 <body >
-	<header class="page-header">
-		<h2>Genomics</h2>
-	</header>
+	<header class="page__header"> 
+		<div id="logo"> <h3>Genomics Project</h3></div>
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list">
+        <li ><a href="index.html">Home</a></li>
+       <li class="activeLink"><a href="test.html">Test</a></li>
+      </ul>
+    </nav>
+</header>
 <main>
+	<div class="fcon">
 	<div class="container">
-		<h3>result</h3>
-		<table style="width:100%">
-  <tr>
-    <th>test</th>
-    <th>result</th> 
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+		<h3>Detecting Errors Results</h3>
+		<p>Thanks for your submission, You can find results below.
+</p>
+		<img src="geno.jpg" id="img">
 
-	</div>
+	</div></div>
 </main>
 
 <footer class="page__footer">
