@@ -11,7 +11,7 @@ we aim to develop software dealing with different biological data using
 artificial intelligence technology to detect a specific error resulting about 
 machine sequence and try to correct it to get best accuracy.
 
-# Our idea
+# Our Idea
 
 website that deal with different biological data using artificial intelligence technology 
 to detect a specific error resulting from NGS machine and try to correct it to get best accuracy.
